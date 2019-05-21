@@ -56,6 +56,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -65,6 +68,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -120,14 +124,23 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Data\ClinicaDbContext.cs" />
+    <Compile Include="Data\RoomDataGateway.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IEntity.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201905140013442_Initial-Create.cs" />
-    <Compile Include="Migrations\201905140013442_Initial-Create.Designer.cs">
-      <DependentUpon>201905140013442_Initial-Create.cs</DependentUpon>
+    <Compile Include="Migrations\201905210002165_Initial-Create.cs" />
+    <Compile Include="Migrations\201905210002165_Initial-Create.Designer.cs">
+      <DependentUpon>201905210002165_Initial-Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905210029519_metadata.cs" />
+    <Compile Include="Migrations\201905210029519_metadata.Designer.cs">
+      <DependentUpon>201905210029519_metadata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201905210031447_metad.cs" />
+    <Compile Include="Migrations\201905210031447_metad.Designer.cs">
+      <DependentUpon>201905210031447_metad.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
@@ -135,6 +148,7 @@
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharedKernel\Enum.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -155,8 +169,14 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201905140013442_Initial-Create.resx">
-      <DependentUpon>201905140013442_Initial-Create.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905210002165_Initial-Create.resx">
+      <DependentUpon>201905210002165_Initial-Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905210029519_metadata.resx">
+      <DependentUpon>201905210029519_metadata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905210031447_metad.resx">
+      <DependentUpon>201905210031447_metad.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
